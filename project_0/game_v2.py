@@ -1,7 +1,7 @@
 """Игра угадай число."""
 import numpy as np
 
-def game_core_v3(number: int = 1) -> int:
+def random_predict(number: int = 1) -> int:
     """
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
@@ -33,7 +33,7 @@ def score_game(random_predict) -> int:
     """За какое количество в среднем угадывает наш подход
 
     Args:
-        random_predict (_type_): Функция угадвыния
+        random_predict ([type]): Функция угадвыния
 
     Returns:
         int: среднее количество попыток
@@ -47,4 +47,6 @@ def score_game(random_predict) -> int:
         
     score = int(np.mean(count_ls))    
     print(f'Ваш алгоритм угадыыает число в среднем за:{score} попыток')
-    return(score)
+    return score
+if __name__ == "__main__":
+    score_game(random_predict)
